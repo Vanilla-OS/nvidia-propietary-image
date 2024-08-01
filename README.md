@@ -1,6 +1,9 @@
-# Vanilla OS Nvidia Image
+# Vanilla OS Nvidia Propietary Image
 
-Containerfile for building a Vanilla OS Desktop + Nvidia image.
+Containerfile for building a Vanilla OS Desktop + Nvidia Propietary (for old GPUs) image.
+
+> [!NOTE]
+> This image will be enabled in the Vanilla OS installer only if [this](https://github.com/Vanilla-OS/nvidia-image/pull/43) gets merged, making the main NVIDIA image using the official open-source drivers.
 
 This image is based on top of [`vanillaos/desktop`](https://github.com/Vanilla-OS/desktop-image/pkgs/container/desktop) and offers the default Vanilla OS Desktop experience with GNOME and Nvidia drivers.
 

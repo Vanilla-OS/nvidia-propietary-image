@@ -5,7 +5,7 @@
     "registry": "ghcr.io",
     "registryService": "registry.ghcr.io",
     "registryAPIVersion": "v2",
-    "name": "vanilla-os/nvidia",
+    "name": "vanilla-os/nvidia-propietary",
     "tag": "main",
 
     "iPkgMngPre": "lpkg --unlock",

@@ -1,5 +1,5 @@
 name: Vanilla Desktop Nvidia Proprietary
-id: nvidia-propietary
+id: nvidia-proprietary
 stages:
 - id: build
   base: ghcr.io/vanilla-os/desktop:main

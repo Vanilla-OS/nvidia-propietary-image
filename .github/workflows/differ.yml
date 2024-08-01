@@ -10,8 +10,8 @@ jobs:
   differ:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/vanilla-os/nvidia-propietary:main
-    if: github.repository == 'vanilla-os/nvidia-propietary-image'
+      image: ghcr.io/vanilla-os/nvidia-proprietary:main
+    if: github.repository == 'vanilla-os/nvidia-proprietary-image'
 
     steps:
       - uses: actions/checkout@v4
@@ -29,5 +29,5 @@ jobs:
           -H 'Accept:application/json' \
           -H "Authorization:Basic $(echo -n "${{ secrets.DIFFER_USER }}:${{ secrets.DIFFER_PSW }}" | base64)" \
           -d "{\"digest\":\"${IMAGE_DIGEST}\",${PACKAGE_LIST}}" \
-          ${{ vars.DIFFER_URL }}/images/nvidia-propietary/new
+          ${{ vars.DIFFER_URL }}/images/nvidia-proprietary/new
           lpkg --lock

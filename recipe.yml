@@ -29,9 +29,23 @@ stages:
   - name: nvidia-official-driver
     type: shell
     commands:
-    - apt-get update
-    - apt-get install nvidia-driver nvidia-vaapi-driver nvidia-settings nvidia-smi -y
-    - apt-mark hold nvidia-driver nvidia-vaapi-driver nvidia-settings nvidia-smi
+    - apt-mark hold nvidia-driver nvidia-vaapi-driver nvidia-settings nvidia-persistenced nvidia-smi libnvidia-cfg1 libnvidia-glcore libnvidia-glvkspirv libnvidia-gpucomp libnvidia-fbc1 nvidia-container-toolkit
+    modules:
+      - name: install-nvidia
+        type: apt
+        source:
+          packages:
+          - nvidia-driver
+          - nvidia-vaapi-driver
+          - nvidia-settings
+          - nvidia-persistenced
+          - nvidia-smi
+          - libnvidia-cfg1
+          - libnvidia-glcore
+          - libnvidia-glvkspirv
+          - libnvidia-gpucomp
+          - libnvidia-fbc1
+          - nvidia-container-toolkit
 
   - name: extra-utilities
     type: apt

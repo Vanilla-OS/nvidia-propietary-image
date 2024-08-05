@@ -87,6 +87,11 @@ stages:
     - mkdir -p /etc/udev/rules.d
     - ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 
+  - name: deprecation-notice
+    type: shell
+    commands:
+    - chmod +x /usr/bin/fixme
+
   - name: cleanup
     type: shell
     commands:

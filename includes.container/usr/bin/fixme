@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DOCS_URL="https://docs.vanillaos.org/handbook/en/nvidia-issues#i-am-running-a-no-more-supported-image"
+
+adwdialog --title "Manual Intervention Required" --description "It seems you are using an image no longer supported by Vanilla OS, read the instructions to fix." --icon dialog-warning-symbolic --type question --suggested_label "How to Fix"
+
+if [ $? -eq 0 ]; then
+    xdg-open $DOCS_URL
+fi
